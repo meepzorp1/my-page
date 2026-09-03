@@ -61,7 +61,7 @@ useEffect(() => {
   if (!underline || !label_text || !container || !possible) return;
 
   const ctx = gsap.context(() => {
-    gsap.set(possible, { y: -60, x: 200 });
+    gsap.set(possible, { y: -60, x: 192 });
     gsap.set(container, { opacity: 1 });
     gsap.set(label_text, { rotation: 2, y: 0 });
     gsap.set(underline, {
@@ -83,14 +83,14 @@ useEffect(() => {
       letterSpacing: "0.1em",
       scaleX: 1.1,
       fontWeight: 700,
-      delay: 2.25,
+      delay: 2.75,
       duration: 4,
     });
     gsap.to(underline, { color: "rgb(192, 144, 15)", ease: "power2.out", delay: 5.25, duration: 2 });
-    gsap.to(label_text, { rotation: 0, ease: "power2.out", delay: 1.25, duration: 2 });
+    gsap.to(label_text, { rotation: 0, ease: "power2.out", delay: 1.25, duration: 2.5 });
     gsap.to(label_text, { y: 30, ease: "power2.inOut", delay: 3, duration: 1.5 });
     gsap.to(container, { opacity: 0.9, ease: "power2.out", duration: 3, delay: 3 });
-    gsap.to(possible, { y: 0, x: 0, duration: 10, delay: 5, });
+    gsap.to(possible, { y: 0, x: 74, duration: 2, delay: 4, });
   });
 
   return () => ctx.revert(); // kills tweens + resets inline styles on unmount/re-run
@@ -369,7 +369,7 @@ useEffect(() => {
                   ref={collectRef}
                   data-gsap="project-link"
                   href={project.href}
-                  className="text-sm font-medium text-zinc-200 underline decoration-zinc-700 underline-offset-4 hover:decoration-zinc-300"
+                  className="text-sm rounded-2xl py-1 px-3 font-medium text-zinc-800 underline bg-yellow-100 decoration-zinc-700 underline-offset-4 hover:decoration-zinc-300"
                 >
                   View project
                 </Link>
