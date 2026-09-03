@@ -192,32 +192,50 @@ useEffect(() => {
         >
           I&apos;m a software development student with a background in web
           development, currently working with TypeScript, React, Next.js, and
-          Python. Solving real world problem with algorithms.
+          Python. Solving real-world problem with code.
         </p>
 
-        <div
-          ref={collectRef}
-          data-gsap="hero-actions"
-          className="mt-10 flex flex-wrap gap-4"
-        >
-          <Link
-            ref={collectRef}
-            data-gsap="hero-action"
-            href="#projects"
-            className="rounded-full bg-zinc-100 px-6 py-3 font-medium text-zinc-950 transition hover:bg-white"
-          >
-            View my work
-          </Link>
+        <div className="flex flex-wrap gap-4 py-12">
+  <Link
+    ref={collectRef}
+    data-gsap="hero-action"
+    href="#work"
+    className="
+      group rounded-full
+      bg-zinc-100 px-6 py-3
+      font-medium text-zinc-950
+      transition-all duration-300
+      hover:-translate-y-0.5
+      hover:bg-white
+      hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)]
+    "
+  >
+    View my work
+    <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </Link>
 
-          <Link
-            ref={collectRef}
-            data-gsap="hero-action"
-            href="#contact"
-            className="rounded-full border border-zinc-700 px-6 py-3 font-medium transition hover:border-zinc-500 hover:bg-zinc-900"
-          >
-            Contact me
-          </Link>
-        </div>
+  <Link
+    ref={collectRef}
+    data-gsap="hero-action"
+    href="#contact"
+    className="
+      group rounded-full
+      border border-zinc-700
+      px-6 py-3 font-medium
+      transition-all duration-300
+      hover:-translate-y-0.5
+      hover:border-zinc-500
+      hover:bg-zinc-900/70
+    "
+  >
+    Contact me
+    <span className="ml-2 inline-block opacity-50 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+      ↗
+    </span>
+  </Link>
+</div>
       </section>
 
       {/* ABOUT */}

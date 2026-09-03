@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,7 +12,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
+// 0110110101100101011001010111000001111010011011110111001001110000
 export const metadata: Metadata = {
   title: {
     default: "Meep | Software Developer",
@@ -45,7 +46,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}<Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="871e3b3b-8ac4-445b-bcb8-fa1ea8180799"
+          strategy="afterInteractive"
+        /></body>
     </html>
   );
 }
