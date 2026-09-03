@@ -86,7 +86,7 @@ useEffect(() => {
       delay: 2.75,
       duration: 4,
     });
-    gsap.to(underline, { color: "rgb(192, 144, 15)", ease: "power2.out", delay: 5.25, duration: 2 });
+    gsap.to(underline, { color: "rgb(129, 126, 108)", ease: "power2.out", delay: 5.25, duration: 2 });
     gsap.to(label_text, { rotation: 0, ease: "power2.out", delay: 1.25, duration: 2.5 });
     gsap.to(label_text, { y: 30, ease: "power2.inOut", delay: 3, duration: 1.5 });
     gsap.to(container, { opacity: 0.9, ease: "power2.out", duration: 3, delay: 3 });
@@ -123,12 +123,12 @@ useEffect(() => {
             className="
               relative z-10 px-6 py-2
               inline-block
-              before:absolute before:bottom-0 before:left-0
+              before:absolute before:top-0 before:left-0
               before:h-full before:w-0.5
-              before:bg-linear-to-t before:from-blue-500 before:to-transparent
+              before:bg-linear-to-b before:from-blue-600 before:to-transparent
               after:absolute after:right-0 after:top-0
               after:h-full after:w-0.5
-              after:bg-linear-to-b after:from-blue-500 after:to-transparent
+              after:bg-linear-to-b after:from-blue-600 after:to-transparent
             "
           >
             Developer · Student · Builder
@@ -461,7 +461,7 @@ useEffect(() => {
             <a
               ref={collectRef}
               data-gsap="contact-link"
-              href="mailto:you@example.com"
+              href="mailto:adam.beau.diaz@gmail.com"
               className="text-zinc-200 underline decoration-zinc-700 underline-offset-4 hover:decoration-zinc-300"
             >
               Email
