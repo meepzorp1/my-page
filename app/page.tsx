@@ -89,7 +89,7 @@ useEffect(() => {
     gsap.to(underline, { color: "rgb(129, 126, 108)", ease: "power2.out", delay: 5.25, duration: 2 });
     gsap.to(label_text, { rotation: 0, ease: "power2.out", delay: 1.25, duration: 2.5 });
     gsap.to(label_text, { y: 30, ease: "power2.inOut", delay: 3, duration: 1.5 });
-    gsap.to(container, { opacity: 0.9, ease: "power2.out", duration: 3, delay: 3 });
+    gsap.to(container, { opacity: 0.8, ease: "power2.out", duration: 3, delay: 3 });
     gsap.to(possible, { y: 0, x: 74, duration: 2, delay: 4, });
   });
 
@@ -100,8 +100,10 @@ useEffect(() => {
     <main
       ref={collectRef}
       data-gsap="main"
-      className="min-h-screen text-zinc-100
-      bg-[url('/texture2.jpg')] bg-center
+      className="
+      min-h-screen
+      text-zinc-100
+      bg-olive-500
       overflow-hidden"
     >
       <div ref={collectRef} data-gsap="hero-container" className="bg-black">
